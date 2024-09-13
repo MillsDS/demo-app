@@ -1,0 +1,24 @@
+---
+apiVersion: secrets.hashicorp.com/v1beta1
+kind: HCPAuth
+metadata:
+  name: my-hcp-org
+spec:
+  organizationID: ccb45751-17f5-488d-97c2-f2ca7293ec27
+  projectID: ad203a6b-b390-46a5-b9b7-98d192be2159
+  method: servicePrincipal
+  servicePrincipal:
+    secretRef: my-hcp-org
+
+---
+apiVersion: secrets.hashicorp.com/v1beta1
+kind: HCPVaultSecretsApp
+metadata:
+  name: demo-app
+spec:
+  appName: demo-app
+  hcpAuthRef: my-hcp-org
+  refreshAfter: 1m
+  destination:
+    name: demo-app-secrets
+    create: true
