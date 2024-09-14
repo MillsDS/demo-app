@@ -1,6 +1,6 @@
 module demo-app
 
-go 1.22
+go 1.21
 
 require (
 	cloud.google.com/go/secretmanager v1.13.1
