@@ -19,14 +19,14 @@ func main() {
 		awsBucketObject = "demo.html"
 	)
 
-	awsAccessKey, ok := os.LookupEnv("MY_AWS_ACCESS_KEY_ID")
+	awsAccessKey, ok := os.LookupEnv("ROTATEV1_ACCESS_KEY_ID")
 	if !ok {
-		log.Fatal("missing MY_AWS_ACCESS_KEY_ID")
+		log.Fatal("missing ROTATEV1_ACCESS_KEY_ID")
 	}
 
-	awsSecretAccessKey, ok := os.LookupEnv("MY_AWS_SECRET_ACCESS_KEY")
+	awsSecretAccessKey, ok := os.LookupEnv("ROTATEV1_SECRET_ACCESS_KEY")
 	if !ok {
-		log.Fatal("missing MY_AWS_SECRET_ACCESS_KEY")
+		log.Fatal("missing ROTATEV1_SECRET_ACCESS_KEY")
 	}
 
 	cfg, err := config.LoadDefaultConfig(context.TODO(),
