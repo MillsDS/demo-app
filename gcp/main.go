@@ -37,7 +37,7 @@ func main() {
 		}
 
 		// read from my-cool-test-bucket & copy it to response
-		bucket := client.Bucket("my-cool-test-bucket")
+		bucket := client.Bucket("damillsbucket")
 		object := bucket.Object(objectLabel())
 
 		b, err := object.NewReader(ctx)
