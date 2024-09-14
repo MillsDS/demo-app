@@ -15,7 +15,7 @@ import (
 func main() {
 	var (
 		awsRegion       = "us-east-1"
-		awsBucket       = "davidrotatebucket"
+		awsBucket       = "damillsbucket"
 		awsBucketObject = "demo.html"
 	)
 
